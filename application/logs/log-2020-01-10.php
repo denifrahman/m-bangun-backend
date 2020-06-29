@@ -1,0 +1,37 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2020-01-10 09:12:27 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:12:27 --> 404 Page Not Found: Assets/particles.js
+ERROR - 2020-01-10 09:12:27 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:12:28 --> 404 Page Not Found: Assets/images
+ERROR - 2020-01-10 09:12:32 --> 404 Page Not Found: Assets/particles.js
+ERROR - 2020-01-10 09:12:32 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:12:32 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:14:40 --> 404 Page Not Found: Assets/particles.js
+ERROR - 2020-01-10 09:14:40 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:14:40 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:14:41 --> 404 Page Not Found: Assets/particles.js
+ERROR - 2020-01-10 09:14:42 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:14:42 --> 404 Page Not Found: Assets/images
+ERROR - 2020-01-10 09:14:42 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:19:47 --> 404 Page Not Found: Assets/particles.js
+ERROR - 2020-01-10 09:19:47 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:19:47 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:19:48 --> 404 Page Not Found: Assets/particles.js
+ERROR - 2020-01-10 09:19:48 --> 404 Page Not Found: Assets/images
+ERROR - 2020-01-10 09:19:49 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:19:49 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:45:01 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:45:01 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:45:01 --> 404 Page Not Found: Assets/particles.js
+ERROR - 2020-01-10 09:45:01 --> 404 Page Not Found: Assets/particles.js
+ERROR - 2020-01-10 09:45:01 --> 404 Page Not Found: Assets/images
+ERROR - 2020-01-10 09:45:01 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:45:01 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:45:06 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:45:06 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:45:06 --> 404 Page Not Found: Assets/particles.js
+ERROR - 2020-01-10 09:45:06 --> 404 Page Not Found: Assets/images
+ERROR - 2020-01-10 09:45:07 --> 404 Page Not Found: Assets/particles.js
+ERROR - 2020-01-10 09:45:07 --> 404 Page Not Found: Assets/js
+ERROR - 2020-01-10 09:45:07 --> 404 Page Not Found: Assets/js

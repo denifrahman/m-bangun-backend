@@ -1,0 +1,56 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2019-01-07 07:09:09 --> 404 Page Not Found: Inc/api
+ERROR - 2019-01-07 07:33:05 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 07:33:05 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 07:33:06 --> 404 Page Not Found: Inc/api
+ERROR - 2019-01-07 07:33:33 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 07:34:45 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 07:34:45 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 07:34:46 --> 404 Page Not Found: Inc/api
+ERROR - 2019-01-07 07:39:47 --> Severity: Warning --> pg_connect(): Unable to connect to PostgreSQL server: could not translate host name &quot;dbase.sheerkah.id&quot; to address: Unknown host C:\xampp\htdocs\mitra.sheerkah\system\database\drivers\postgre\postgre_driver.php 154
+ERROR - 2019-01-07 07:39:47 --> Unable to connect to the database
+ERROR - 2019-01-07 07:47:21 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 07:47:22 --> 404 Page Not Found: Inc/api
+ERROR - 2019-01-07 09:42:30 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 09:42:30 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 09:42:31 --> 404 Page Not Found: Inc/api
+ERROR - 2019-01-07 09:45:45 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 09:45:46 --> 404 Page Not Found: Inc/api
+ERROR - 2019-01-07 09:45:56 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 09:45:57 --> 404 Page Not Found: Inc/api
+ERROR - 2019-01-07 09:58:24 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 09:58:25 --> 404 Page Not Found: Inc/api
+ERROR - 2019-01-07 15:13:46 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:13:46 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:13:46 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 15:13:46 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:15:26 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 15:15:26 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:15:26 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:15:27 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:17:50 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 15:17:50 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:17:50 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:17:51 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:18:01 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 15:18:02 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:18:02 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:18:02 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:18:07 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 15:18:07 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:18:07 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:18:07 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:18:23 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 15:18:24 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:18:24 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:18:24 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:18:30 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 15:18:30 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:18:30 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:18:30 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:19:10 --> 404 Page Not Found: Assets/vakhirors
+ERROR - 2019-01-07 15:20:03 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 15:20:03 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 15:20:04 --> 404 Page Not Found: Assets/vendors
+ERROR - 2019-01-07 15:21:43 --> 404 Page Not Found: Assets/vendors
