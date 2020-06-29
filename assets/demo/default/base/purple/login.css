@@ -1,0 +1,42 @@
+.m-portlet {
+	box-shadow: 2px 2px #eeeeee;
+	border-radius: 10px;
+}
+
+.m-login__wrapper {
+	padding-top: 100px;
+	padding-right: 120px;
+	/* padding-bottom: 50px; */
+	padding-left: 120px;
+	background-color: #faebff;
+}
+
+.m_text {
+	color: #D5468C;
+	text-align: center;
+}
+
+.m-grid_img {
+	background-position: left;
+}
+
+.m-grid_logo {
+	padding-right: 150px;
+	padding-left: 150px;
+	text-align: right;
+	font-size: 25px;
+	color: #000;
+	border-width: 3px;
+}
+
+.m-link_reg {
+	color: #D5468C;
+}
+
+.input[type=text] {
+	color: #f0f0f0;
+}
+
+.m_text2 {
+	text-align: right;
+}
