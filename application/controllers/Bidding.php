@@ -19,6 +19,13 @@ class Bidding extends CI_Controller
     }
     public function progress()
     {
-        $this->load->view('bidding/progress');
+        $produkid = $this->input->get('id', TRUE);
+        $data['data_user_bid'] = json_decode(request_api_get(API_GET . '/Bid/getBidByProdukId/' . $produkid, false))->data;
+        if($data['data_user_bid'] != null){
+            $this->load->view('bidding/progress',$data);
+        }else{
+            echo "<script type='text/javascript'>alert('Bidding belum ada yang terpilih!!!');</script>";
+            redirect(base_url('bidding'));
+        }
     }
 }

@@ -32,6 +32,9 @@
                     "status": 'New'
                 }
             },
+            "drawCallback": function() {
+                $(this.api().table().header()).hide();
+            },
             //Set column definition initialisation properties.
             rowGroup: {
                 dataSrc: 1

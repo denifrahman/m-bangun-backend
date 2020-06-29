@@ -34,16 +34,28 @@
                     <!--Begin::Section-->
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="m-portlet m-portlet--full-height  ">
+                            <div class="m-portlet">
                                 <div class="m-portlet__body">
                                     <div class=" m--margin-top-10 m--hide">
                                     </div>
-                                    <div class=" row" style='border-bottom:2px solid #ccc;margin-bottom:10px'>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <h3 class="m-form__section">Detail Data :</h3>
+                                    <div class="row">
+                                        <span style="width: 250px;">
+                                            <div class="d-flex align-items-center">
+                                                <div class="symbol symbol-40 symbol-circle symbol-sm">
+                                                    <center>
+                                                        <span class="m-topbar__userpic">
+                                                            <img src="http://niagatravel.com/api/api-m-bangun-jwt-token/assets/1.jpeg" class="m--img-rounded m--marginless" style="width:50px;height:50px;">
+                                                        </span>
+                                                    </center>
+                                                </div>
+                                                <div class="ml-3">
+                                                    <div class="text-dark-75 font-weight-bold font-size-lg mb-0"><?= $data_user_bid->userbidnama ?></div><a href="#" class="text-muted font-weight-normal text-hover-primary">28-06-2020</a>
+                                                    <p style="color:green;"><?= number_format($data_user_bid->bidprice) ?> | <?= $data_user_bid->statusnama ?></p>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </span>
+                                    </div>
+                                    <div class="m-portlet__body-separator">
                                     </div>
                                     <div class=" row" style='border-bottom:1px solid #8080801f;margin-bottom:10px'>
                                         <div class="col-12 row" style="margin-bottom: 10px;">
@@ -119,83 +131,616 @@
                                             </p>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-12 row" style="margin-top: 10px;">
+                                            <strong>
+                                                Foto
+                                            </strong>
+                                        </div>
+                                    </div>
+                                    <div class="m-card-profile">
+                                        <div class="row">
+                                            <div class="m-card-profile__pic col-2.4">
+                                                <div class="m-card-profile__pic-wrapper">
+                                                    <img id="produkthumbnail" src="" style="width: 75px;height: 75px;">
+                                                </div>
+                                            </div>
+                                            <div class="m-card-profile__pic col-2.4">
+                                                <div class="m-card-profile__pic-wrapper">
+                                                    <img id="produkfoto1" src="" style="width: 75px;height: 75px;">
+                                                </div>
+                                            </div>
+                                            <div class="m-card-profile__pic col-2.4">
+                                                <div class="m-card-profile__pic-wrapper">
+                                                    <img id="produkfoto2" src="" style="width: 75px;height: 75px;">
+                                                </div>
+                                            </div>
+                                            <div class="m-card-profile__pic col-2.4">
+                                                <div class="m-card-profile__pic-wrapper">
+                                                    <img id="produkfoto3" src="" style="width: 75px;height: 75px;">
+                                                </div>
+                                            </div>
+                                            <div class="m-card-profile__pic col-2.4">
+                                                <div class="m-card-profile__pic-wrapper">
+                                                    <img id="produkfoto4" src="" style="width: 75px;height: 75px;">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-8">
-                            <div class="m-portlet m-portlet--full-height  ">
+                            <div class="m-portlet m-portlet">
                                 <div class="m-portlet__body">
-                                    <div class=" row">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <h3 class="m-form__section">Detail Foto :</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="m-card-profile">
-                                            <div class="row">
-                                                <div class="m-card-profile__pic col-2.4">
-                                                    <div class="m-card-profile__pic-wrapper">
-                                                        <img id="produkthumbnail" src="" style="width: 100px;height: 100px;">
-                                                    </div>
-                                                </div>
-                                                <div class="m-card-profile__pic col-2.4">
-                                                    <div class="m-card-profile__pic-wrapper">
-                                                        <img id="produkfoto1" src="" style="width: 100px;height: 100px;">
-                                                    </div>
-                                                </div>
-                                                <div class="m-card-profile__pic col-2.4">
-                                                    <div class="m-card-profile__pic-wrapper">
-                                                        <img id="produkfoto2" src="" style="width: 100px;height: 100px;">
-                                                    </div>
-                                                </div>
-                                                <div class="m-card-profile__pic col-2.4">
-                                                    <div class="m-card-profile__pic-wrapper">
-                                                        <img id="produkfoto3" src="" style="width: 100px;height: 100px;">
-                                                    </div>
-                                                </div>
-                                                <div class="m-card-profile__pic col-2.4">
-                                                    <div class="m-card-profile__pic-wrapper">
-                                                        <img id="produkfoto4" src="" style="width: 100px;height: 100px;">
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h3 class="m-form__section">Detail Progress :</h3>
                                         </div>
                                     </div>
                                     <div class="m-portlet__body-separator">
                                     </div>
-                                    <form id="formUpdate">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <label for="example-text-input" class="control-label">Status</label>
-                                                <div class="input-group m-input-group id_100">
-                                                    <select disabled required class="form-control" id="select_1" style="width:100%" name="id_jenis_jadwal" require>
-                                                    </select>
+                                    <div style="width: 100%; height: 700px; overflow: scroll; background: #f2f3f8; padding-top:15px;">
+                                        <div class="col-12">
+                                            <div class="card card-custom gutter-b" style="margin-bottom: 31px;">
+                                                <div class="card-body">
+                                                    <!--begin::Top-->
+                                                    <div class="d-flex">
+                                                        <!--begin: Info-->
+                                                        <div class="flex-grow-1">
+                                                            <!--begin::Title-->
+                                                            <div class="d-flex align-items-center justify-content-between flex-wrap mt-2">
+                                                                <!--begin::User-->
+                                                                <div class="mr-3">
+                                                                    <!--begin::Name-->
+                                                                    <a href="#" class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">
+                                                                        judul<i class="flaticon2-correct text-success icon-md ml-2"></i>
+                                                                    </a>
+                                                                    <!--end::Name-->
+
+                                                                    <!--begin::Contacts-->
+                                                                    <div class="d-flex flex-wrap my-2">
+                                                                        <a href="#" class="text-muted text-hover-primary font-weight-normal mr-lg-8 mr-5 mb-lg-0 mb-2">
+                                                                            <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
+                                                                                <i class="fa fa-user-alt"></i>
+                                                                                <!--end::Svg Icon--></span> judul progress
+                                                                        </a>
+                                                                        <a href="#" class="text-muted text-hover-primary font-weight-normal mr-lg-8 mr-5 mb-lg-0 mb-2">
+                                                                            <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
+                                                                                <!--begin::Svg Icon | path:/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/icons/General/Lock.svg-->
+                                                                                <i class="fas fa-calendar-alt"></i>
+                                                                                <!--end::Svg Icon-->
+                                                                            </span> Tanggal progress
+                                                                        </a>
+                                                                        <a href="#" class="text-muted text-hover-primary font-weight-normal">
+                                                                            <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
+                                                                                <!--begin::Svg Icon | path:/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/icons/Map/Marker2.svg--><i class="fas fa-location-arrow"></i>
+                                                                                <!--end::Svg Icon--></span> Alamat
+                                                                        </a>
+                                                                    </div>
+                                                                    <!--end::Contacts-->
+                                                                </div>
+                                                                <!--begin::User-->
+
+                                                                <!--begin::Actions-->
+                                                                <div class="my-lg-0 my-1">
+                                                                    <span class="m-switch m-switch--icon m-switch--success">
+                                                                        <label>
+                                                                            test
+                                                                            <span></span>
+                                                                        </label>
+                                                                    </span>
+                                                                </div>
+                                                                <!--end::Actions-->
+                                                            </div>
+                                                            <!--end::Title-->
+
+                                                            <!--begin::Content-->
+                                                            <div class="d-flex align-items-center flex-wrap justify-content-between">
+                                                                <!--begin::Description-->
+                                                                <div class="font-weight-normal text-dark-50 py-2 py-lg-2 mr-5">
+                                                                    Progress deskripsi
+                                                                </div>
+                                                                <!--end::Description-->
+                                                            </div>
+                                                            <!--end::Content-->
+                                                        </div>
+                                                        <!--end::Info-->
+                                                    </div>
+                                                    <!--end::Top-->
+
+                                                    <!--begin::Separator-->
+                                                    <div class="separator separator-solid my-7" style="margin-bottom: 20px; margin-top: 20px;"></div>
+                                                    <!--end::Separator-->
+
+                                                    <!--begin::Bottom-->
+                                                    <div class="d-flex align-items-center flex-wrap">
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+                                                    </div>
+                                                    <!--end::Bottom-->
+
+                                                </div>
+                                            </div>
+                                            <div class="card card-custom gutter-b" style="margin-bottom: 31px;">
+                                                <div class="card-body">
+                                                    <!--begin::Top-->
+                                                    <div class="d-flex">
+                                                        <!--begin: Info-->
+                                                        <div class="flex-grow-1">
+                                                            <!--begin::Title-->
+                                                            <div class="d-flex align-items-center justify-content-between flex-wrap mt-2">
+                                                                <!--begin::User-->
+                                                                <div class="mr-3">
+                                                                    <!--begin::Name-->
+                                                                    <a href="#" class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">
+                                                                        judul<i class="flaticon2-correct text-success icon-md ml-2"></i>
+                                                                    </a>
+                                                                    <!--end::Name-->
+
+                                                                    <!--begin::Contacts-->
+                                                                    <div class="d-flex flex-wrap my-2">
+                                                                        <a href="#" class="text-muted text-hover-primary font-weight-normal mr-lg-8 mr-5 mb-lg-0 mb-2">
+                                                                            <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
+                                                                                <i class="fa fa-user-alt"></i>
+                                                                                <!--end::Svg Icon--></span> judul progress
+                                                                        </a>
+                                                                        <a href="#" class="text-muted text-hover-primary font-weight-normal mr-lg-8 mr-5 mb-lg-0 mb-2">
+                                                                            <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
+                                                                                <!--begin::Svg Icon | path:/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/icons/General/Lock.svg-->
+                                                                                <i class="fas fa-calendar-alt"></i>
+                                                                                <!--end::Svg Icon-->
+                                                                            </span> Tanggal progress
+                                                                        </a>
+                                                                        <a href="#" class="text-muted text-hover-primary font-weight-normal">
+                                                                            <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
+                                                                                <!--begin::Svg Icon | path:/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/icons/Map/Marker2.svg--><i class="fas fa-location-arrow"></i>
+                                                                                <!--end::Svg Icon--></span> Alamat
+                                                                        </a>
+                                                                    </div>
+                                                                    <!--end::Contacts-->
+                                                                </div>
+                                                                <!--begin::User-->
+
+                                                                <!--begin::Actions-->
+                                                                <div class="my-lg-0 my-1">
+                                                                    <span class="m-switch m-switch--icon m-switch--success">
+                                                                        <label>
+                                                                            test
+                                                                            <span></span>
+                                                                        </label>
+                                                                    </span>
+                                                                </div>
+                                                                <!--end::Actions-->
+                                                            </div>
+                                                            <!--end::Title-->
+
+                                                            <!--begin::Content-->
+                                                            <div class="d-flex align-items-center flex-wrap justify-content-between">
+                                                                <!--begin::Description-->
+                                                                <div class="font-weight-normal text-dark-50 py-2 py-lg-2 mr-5">
+                                                                    Progress deskripsi
+                                                                </div>
+                                                                <!--end::Description-->
+                                                            </div>
+                                                            <!--end::Content-->
+                                                        </div>
+                                                        <!--end::Info-->
+                                                    </div>
+                                                    <!--end::Top-->
+
+                                                    <!--begin::Separator-->
+                                                    <div class="separator separator-solid my-7" style="margin-bottom: 20px; margin-top: 20px;"></div>
+                                                    <!--end::Separator-->
+
+                                                    <!--begin::Bottom-->
+                                                    <div class="d-flex align-items-center flex-wrap">
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+                                                    </div>
+                                                    <!--end::Bottom-->
+
+                                                </div>
+                                            </div>
+                                            <div class="card card-custom gutter-b" style="margin-bottom: 31px;">
+                                                <div class="card-body">
+                                                    <!--begin::Top-->
+                                                    <div class="d-flex">
+                                                        <!--begin: Info-->
+                                                        <div class="flex-grow-1">
+                                                            <!--begin::Title-->
+                                                            <div class="d-flex align-items-center justify-content-between flex-wrap mt-2">
+                                                                <!--begin::User-->
+                                                                <div class="mr-3">
+                                                                    <!--begin::Name-->
+                                                                    <a href="#" class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">
+                                                                        judul<i class="flaticon2-correct text-success icon-md ml-2"></i>
+                                                                    </a>
+                                                                    <!--end::Name-->
+
+                                                                    <!--begin::Contacts-->
+                                                                    <div class="d-flex flex-wrap my-2">
+                                                                        <a href="#" class="text-muted text-hover-primary font-weight-normal mr-lg-8 mr-5 mb-lg-0 mb-2">
+                                                                            <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
+                                                                                <i class="fa fa-user-alt"></i>
+                                                                                <!--end::Svg Icon--></span> judul progress
+                                                                        </a>
+                                                                        <a href="#" class="text-muted text-hover-primary font-weight-normal mr-lg-8 mr-5 mb-lg-0 mb-2">
+                                                                            <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
+                                                                                <!--begin::Svg Icon | path:/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/icons/General/Lock.svg-->
+                                                                                <i class="fas fa-calendar-alt"></i>
+                                                                                <!--end::Svg Icon-->
+                                                                            </span> Tanggal progress
+                                                                        </a>
+                                                                        <a href="#" class="text-muted text-hover-primary font-weight-normal">
+                                                                            <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
+                                                                                <!--begin::Svg Icon | path:/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/icons/Map/Marker2.svg--><i class="fas fa-location-arrow"></i>
+                                                                                <!--end::Svg Icon--></span> Alamat
+                                                                        </a>
+                                                                    </div>
+                                                                    <!--end::Contacts-->
+                                                                </div>
+                                                                <!--begin::User-->
+
+                                                                <!--begin::Actions-->
+                                                                <div class="my-lg-0 my-1">
+                                                                    <span class="m-switch m-switch--icon m-switch--success">
+                                                                        <label>
+                                                                            test
+                                                                            <span></span>
+                                                                        </label>
+                                                                    </span>
+                                                                </div>
+                                                                <!--end::Actions-->
+                                                            </div>
+                                                            <!--end::Title-->
+
+                                                            <!--begin::Content-->
+                                                            <div class="d-flex align-items-center flex-wrap justify-content-between">
+                                                                <!--begin::Description-->
+                                                                <div class="font-weight-normal text-dark-50 py-2 py-lg-2 mr-5">
+                                                                    Progress deskripsi
+                                                                </div>
+                                                                <!--end::Description-->
+                                                            </div>
+                                                            <!--end::Content-->
+                                                        </div>
+                                                        <!--end::Info-->
+                                                    </div>
+                                                    <!--end::Top-->
+
+                                                    <!--begin::Separator-->
+                                                    <div class="separator separator-solid my-7" style="margin-bottom: 20px; margin-top: 20px;"></div>
+                                                    <!--end::Separator-->
+
+                                                    <!--begin::Bottom-->
+                                                    <div class="d-flex align-items-center flex-wrap">
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+                                                    </div>
+                                                    <!--end::Bottom-->
+
+                                                </div>
+                                            </div>
+                                            <div class="card card-custom gutter-b" style="margin-bottom: 31px;">
+                                                <div class="card-body">
+                                                    <!--begin::Top-->
+                                                    <div class="d-flex">
+                                                        <!--begin: Info-->
+                                                        <div class="flex-grow-1">
+                                                            <!--begin::Title-->
+                                                            <div class="d-flex align-items-center justify-content-between flex-wrap mt-2">
+                                                                <!--begin::User-->
+                                                                <div class="mr-3">
+                                                                    <!--begin::Name-->
+                                                                    <a href="#" class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">
+                                                                        judul<i class="flaticon2-correct text-success icon-md ml-2"></i>
+                                                                    </a>
+                                                                    <!--end::Name-->
+
+                                                                    <!--begin::Contacts-->
+                                                                    <div class="d-flex flex-wrap my-2">
+                                                                        <a href="#" class="text-muted text-hover-primary font-weight-normal mr-lg-8 mr-5 mb-lg-0 mb-2">
+                                                                            <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
+                                                                                <i class="fa fa-user-alt"></i>
+                                                                                <!--end::Svg Icon--></span> judul progress
+                                                                        </a>
+                                                                        <a href="#" class="text-muted text-hover-primary font-weight-normal mr-lg-8 mr-5 mb-lg-0 mb-2">
+                                                                            <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
+                                                                                <!--begin::Svg Icon | path:/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/icons/General/Lock.svg-->
+                                                                                <i class="fas fa-calendar-alt"></i>
+                                                                                <!--end::Svg Icon-->
+                                                                            </span> Tanggal progress
+                                                                        </a>
+                                                                        <a href="#" class="text-muted text-hover-primary font-weight-normal">
+                                                                            <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
+                                                                                <!--begin::Svg Icon | path:/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/icons/Map/Marker2.svg--><i class="fas fa-location-arrow"></i>
+                                                                                <!--end::Svg Icon--></span> Alamat
+                                                                        </a>
+                                                                    </div>
+                                                                    <!--end::Contacts-->
+                                                                </div>
+                                                                <!--begin::User-->
+
+                                                                <!--begin::Actions-->
+                                                                <div class="my-lg-0 my-1">
+                                                                    <span class="m-switch m-switch--icon m-switch--success">
+                                                                        <label>
+                                                                            test
+                                                                            <span></span>
+                                                                        </label>
+                                                                    </span>
+                                                                </div>
+                                                                <!--end::Actions-->
+                                                            </div>
+                                                            <!--end::Title-->
+
+                                                            <!--begin::Content-->
+                                                            <div class="d-flex align-items-center flex-wrap justify-content-between">
+                                                                <!--begin::Description-->
+                                                                <div class="font-weight-normal text-dark-50 py-2 py-lg-2 mr-5">
+                                                                    Progress deskripsi
+                                                                </div>
+                                                                <!--end::Description-->
+                                                            </div>
+                                                            <!--end::Content-->
+                                                        </div>
+                                                        <!--end::Info-->
+                                                    </div>
+                                                    <!--end::Top-->
+
+                                                    <!--begin::Separator-->
+                                                    <div class="separator separator-solid my-7" style="margin-bottom: 20px; margin-top: 20px;"></div>
+                                                    <!--end::Separator-->
+
+                                                    <!--begin::Bottom-->
+                                                    <div class="d-flex align-items-center flex-wrap">
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+                                                        <!--begin: Item-->
+                                                        <div class="d-flex align-items-center flex-lg-fill mr-5 my-1">
+                                                            <span class="mr-4">
+                                                                <i class="fas fa-home icon-2x text-muted font-weight-bold"></i>
+                                                            </span>
+                                                            <div class="d-flex flex-column text-dark-75">
+                                                                <span class="m-topbar__userpic">
+                                                                    <img src="#" class="m--img-roundedm--marginless" style="width: 80px; height: 80px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end: Item-->
+                                                    </div>
+                                                    <!--end::Bottom-->
+
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="m-portlet__body-separator">
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <label for="example-text-input" class="control-label">Kategori</label>
-                                                <div class="input-group m-input-group">
-                                                    <select required disabled class="form-control" id="select_2" style="width:100%" name="id_jenis_jadwal" require>
-                                                        <option value="0" disabled selected>Pilih Kategori</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <label for="example-text-input" class="control-label">Kategori</label>
-                                                <div class="input-group m-input-group">
-                                                    <select disabled required class="form-control" id="select_3" style="width:100%" require>
-                                                        <option value="0" disabled selected>Pilih Sub</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>

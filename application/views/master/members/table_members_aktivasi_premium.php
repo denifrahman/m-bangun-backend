@@ -38,4 +38,37 @@
 
         });
     }
+    function premium(id) {
+            swal({
+                title: "Apakah anda yakin?",
+                text: "Aktifkan akun premium user ini",
+                type: "warning",
+                showCancelButton: !0,
+                confirmButtonText: "Aktifkan"
+            }).then(function(e) {
+                if (e.value) {
+                    $.ajax({
+                        method: 'get',
+                        dataType: 'json',
+                        url: '<?= API_GET ?>users/aktifPremiumUser/' + id,
+                        success: function(data) {
+                            console.log(data);
+                            if (data.status === true) {
+                                reload_table();
+                                e.value && swal("Terhapus!", "Data di non aktifkan.", "success");
+                            } else {
+                                e.value && swal("Gagal Terhapus!", "Data gagal di non aktifkan.", "error");
+                            }
+                        },
+                        fail: function(e) {
+                            toastr.warning('Data gagal terhapus!');
+                        },
+                        error: function(e) {
+                            toastr.error('Data gagal terhapus!');
+                        }
+                    });
+
+                }
+            })
+        }
 </script>
