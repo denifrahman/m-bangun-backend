@@ -246,7 +246,7 @@
     function setSubKategori(id, idSelect) {
         $.ajax({
             type: "GET",
-            url: "<?= API_GET ?>/Subkategori/getAllByIdKategori/" + id,
+            url: "<?= API_GET ?>/SubKategori/getAllByIdKategori/" + id,
             cache: false,
             dataType: "json",
             success: function(result) {
