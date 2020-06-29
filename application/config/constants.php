@@ -102,6 +102,6 @@ defined('EXIT__AUTO_MAX') or define('EXIT__AUTO_MAX', 125); // highest automatic
 // define('API', 'http://localhost:8888/api_jwt/');
 // define('API_GET', 'http://localhost:8888/api_jwt/web/');
 // define('API_POST', 'http://localhost:8888/api_jwt/web/');
-define('API', 'http://api.m-bangun.com/');
-define('API_GET', 'http://api.m-bangun.com/web/');
-define('API_POST', 'http://api.m-bangun.com/web/');
+define('API', 'http://m-bangun.com/api');
+define('API_GET', 'http://m-bangun.com/api/web/');
+define('API_POST', 'http://m-bangun.com/api/web/');
