@@ -19,7 +19,6 @@
         table = $("#table_list_bidding").DataTable({
             "scrollCollapse": !0,
             "scrollX": true,
-            // "scrollY": "400px",
             "scrollCollapse": true,
             "processing": true, //Feature control the processing indicator.
             "serverSide": true, //Feature control DataTables' server-side processing mode.

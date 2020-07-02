@@ -16,7 +16,7 @@
         $("#table_members_new").DataTable().destroy();
         table = $("#table_members_new").DataTable({
             "scrollCollapse": !0,
-            // "scrollX": true,
+            "scrollX": true,
             // "scrollY": "400px",
             "scrollCollapse": true,
             "processing": true, //Feature control the processing indicator.

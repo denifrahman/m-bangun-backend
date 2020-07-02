@@ -15,8 +15,7 @@
         $("#table_list_bidding_reject").DataTable().destroy();
         table = $("#table_list_bidding_reject").DataTable({
             "scrollCollapse": !0,
-            // "scrollX": true,
-            // "scrollY": "400px",
+            "scrollX": true,
             "scrollCollapse": true,
             "processing": true, //Feature control the processing indicator.
             "serverSide": true, //Feature control DataTables' server-side processing mode.

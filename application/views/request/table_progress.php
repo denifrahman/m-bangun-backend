@@ -15,7 +15,7 @@
         $("#table_request_progress").DataTable().destroy();
         table = $("#table_request_progress").DataTable({
             "scrollCollapse": !0,
-            // "scrollX": true,
+            "scrollX": true,
             // "scrollY": "400px",
             "scrollCollapse": true,
             "processing": true, //Feature control the processing indicator.

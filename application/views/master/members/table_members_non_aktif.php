@@ -50,7 +50,7 @@
         $("#table_members_non_aktif").DataTable().destroy();
         table = $("#table_members_non_aktif").DataTable({
             "scrollCollapse": !0,
-            // "scrollX": true,
+            "scrollX": true,
             // "scrollY": "400px",
             "scrollCollapse": true,
             "processing": true, //Feature control the processing indicator.

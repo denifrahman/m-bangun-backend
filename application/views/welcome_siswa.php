@@ -32,7 +32,7 @@
         <div class="m-subheader ">
           <div class="d-flex align-items-center">
             <div class="mr-auto">
-              <h3 class="m-subheader__title ">Dashboard Siswa Lpp Quantum</h3><br>
+              <h3 class="m-subheader__title ">m-Bangun</h3><br>
             </div>
           </div>
         </div>
