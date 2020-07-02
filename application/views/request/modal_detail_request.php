@@ -1,20 +1,21 @@
 <!-- Modal -->
 <div class="modal fade" id="modal_detail_request" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <form id="formMaster" method="">
+    <form id="submit" method="POST">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="title_modal_tambah_user">Preview Data</h5>
-                    <div class="col-offset-3">
+                    <input type="hidden" name="produkid" id="produkid" value="0">
+                    <input type="hidden" name="produkfile" id="produkfile">
+                    <!-- <div class="col-offset-3">
                         <span class="m-switch m-switch--icon m-switch--info">
                             <label>
-                                <input type="checkbox" name="produkaktif" id="produkaktif">
-                                <input type="hidden" name="is_aktif" id="is_aktif" value="0">
-                                <input type="hidden" name="produkid" id="produkid" value="0">
+                                <input type="checkbox" id="produkaktif">
+                                <input type="hidden" name="produkaktif" id="produkaktif" value="0">
                                 <span></span>
                             </label>
                         </span>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -58,9 +59,26 @@
                                                 Budget
                                             </strong>
                                         </div>
-                                        <div class="col-12">
-                                            <h6 id="produkbudget" style="color: green;">
-                                            </h6>
+                                        <div class="col-12" style="margin-bottom: 10px;">
+                                            <div class="input-group m-input-group">
+                                                <div class="input-group-prepend"><span class="input-group-text">Rp</span></div>
+                                                <input name="produkbudget_view" id="produkbudget_view" type="text" class="form-control m-input" style="text-align:right; font-weight:bold; font-size: 15px" disabled required>
+                                                <input name="produkbudget" id="produkbudget" type="hidden" class="form-control m-input" style="text-align:right; font-weight:bold; font-size: 15px" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" row" style='border-bottom:1px solid #8080801f;margin-bottom:10px'>
+                                        <div class="col-12 row" style="margin-bottom: 10px;">
+                                            <strong>
+                                                Budget Publish
+                                            </strong>
+                                        </div>
+                                        <div class="col-12" style="margin-bottom: 10px;">
+                                            <div class="input-group m-input-group">
+                                                <div class="input-group-prepend"><span class="input-group-text">Rp</span></div>
+                                                <input name="produkharga_view" id="produkharga_view" type="text" class="form-control m-input" style="text-align:right; font-weight:bold; font-size: 15px" disabled required>
+                                                <input name="produkharga" id="produkharga" type="hidden" class="form-control m-input" style="text-align:right; font-weight:bold; font-size: 15px" required>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class=" row" style='border-bottom:1px solid #8080801f;margin-bottom:10px'>
@@ -155,8 +173,15 @@
                                             <div class="col-6">
                                                 <label for="example-text-input" class="control-label">Status</label>
                                                 <div class="input-group m-input-group id_100">
-                                                    <select required class="form-control" id="select_1" style="width:100%" name="id_jenis_jadwal" require>
+                                                    <select required class="form-control" id="select_1" style="width:100%" name="produkstatusid" require>
                                                     </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="example-text-input" class="control-label">Persentase</label>
+                                                <div class="input-group m-input-group">
+                                                    <input name="produkpersentase" id="produkpersentase" type="number" class="form-control m-input" style="text-align:right; font-weight:bold; font-size: 15px" required>
+                                                    <div class="input-group-prepend"><span class="input-group-text">%</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -164,19 +189,37 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <label for="example-text-input" class="control-label">Kategori</label>
+                                                <label for="example-text-input" class="control-label">Penyedia Jasa</label>
                                                 <div class="input-group m-input-group">
-                                                    <select  required class="form-control" id="select_2" style="width:100%" name="id_jenis_jadwal" require>
+                                                    <select required class="form-control" id="select_2" style="width:100%" name="produkkategoriid" require>
                                                         <option value="0" disabled selected>Pilih Kategori</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="col-6">
-                                                <label for="example-text-input" class="control-label">Kategori</label>
+                                                <label for="example-text-input" class="control-label">Sub Penyedia Jasa</label>
                                                 <div class="input-group m-input-group">
-                                                    <select required class="form-control" id="select_3" style="width:100%" require>
+                                                    <select required class="form-control" name="produkkategorisubid" id="select_3" style="width:100%" require>
                                                         <option value="0" disabled selected>Pilih Sub</option>
                                                     </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="m-portlet__body-separator">
+                                        </div>
+                                        <div class="row" id="file_hidden">
+                                            <div class="col-12">
+                                                <label for="example-text-input" class="control-label">Pilihan File</label>
+                                                <div class="input-group m-input-group">
+                                                    <input type="file" id="nama_file" name="nama_file" accept="application/pdf" multiple required />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" id="file_hapus">
+                                            <div class="col-12">
+                                                <label for="example-text-input" class="control-label" id="produkfile_nama"></label>
+                                                <div class="input-group m-input-group">
+                                                    <label onclick="hapusFile()">Hapus</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -189,14 +232,13 @@
                 <!--end::Card-->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary" onclick="updateStatus()">Simpan</button>
+                    <button class="btn btn-success" id="btn_upload" type="submit">Simpan</button>
                 </div>
             </div>
         </div>
 </div>
 <script>
     function setStatus(id) {
-        console.log('test');
         var data = [{
                 "nama": 'New',
                 'value': 1
@@ -288,33 +330,10 @@
         }
     }
 
-    function updateStatus() {
-        if (($("#select_2").val() == null || $("#select_2").val() == '') && $("#select_3").val() == null || $("#select_3").val() == '') {
-            toastr.error("Silahkan pilih kategori");
-        } else {
-            $.ajax({
-                type: "POST",
-                url: "<?= API_POST ?>Produk/updateStatus",
-                data: JSON.stringify({
-                    "produkid": $("#produkid").val(),
-                    "produkstatusid": $("#select_1").val(),
-                    "produkkategorisubid": $("#select_3").val(),
-                    "produkkategoriid": $("#select_2").val()
-                }),
-                success: function(result) {
-                    if (result.status) {
-                        reload_table();
-                        toastr.success("Status berhasil di perbarui");
-                        $('#modal_detail_request').modal('hide');
-                    } else {
-                        toastr.error("Status berhasil di perbarui");
-                    }
-                }
-            });
-        }
-    }
-
     function detailRequest(id) {
+        $("#nama_file").val('');
+        $('#produkharga_view').val('');
+        $('#produkharga').val('');
         swal({
             title: "",
             text: "Tunggu Sebentar...",
@@ -338,7 +357,20 @@
                         backdrop: 'static',
                         keyboard: false
                     });
+                    console.log(result.data.produkfile == null);
+                    if (result.data.produkfile == null || result.data.produkfile == '') {
+                        $("#file_hidden").show();
+                        $("#nama_file").show().prop('required', true)
+                        $("#file_hapus").hide();
+                    } else {
+                        $("#produkfile_nama").show();
+                        $("#produkfile_nama").text(result.data.produkfile);
+                        $("#file_hidden").hide();
+                        $("#nama_file").hide().prop('required', false)
+                        $("#file_hapus").show();
+                    }
                     $("#produknama").text(result.data.produknama);
+                    $("#produkfile").val('file_rab_' + result.data.produkid + '.pdf');
                     $("#produkthumbnail").attr("src", result.data.produkthumbnail);
                     $("#produkfoto1").attr("src", result.data.produkfoto1);
                     $("#produkfoto2").attr("src", result.data.produkfoto2);
@@ -355,13 +387,36 @@
                     setKategori(result.data.produkkategoriid);
                     setSubKategori(result.data.produkkategoriid, result.data.produkkategorisubid);
                     $("#produkid").val(result.data.produkid);
-                    $("#produkbudget").text('Rp ' + format_number(result.data.produkbudget));
+                    $("#produkbudget_view").val(format_number(result.data.produkbudget));
+                    $("#produkbudget").val(result.data.produkbudget);
                     $("#produkwaktupengerjaan").val(result.data.produkwaktupengerjaan);
+                    $("#produkpersentase").val(result.data.produkpersentase);
+                    $("#produkharga").val(result.data.produkharga);
+                    $("#produkharga_view").val(format_number(result.data.produkharga));
                     if (result.data.produkaktif == 1) {
                         $("#produkaktif").prop('checked', true);
                     } else {
                         $("#produkaktif").prop('checked', false);
                     }
+                }
+            }
+        });
+    }
+
+    function hapusFile() {
+        var namaFile = $("#produkfile").val();
+        var produkid = $("#produkid").val();
+        $.ajax({
+            type: "GET",
+            url: "<?= API_GET ?>/Produk/deleteFileByNama/" + namaFile + '/' + produkid,
+            cache: false,
+            dataType: "json",
+            success: function(result) {
+                if (result.status) {
+                    $("#file_hidden").show();
+                    $("#file_hapus").hide();
+                    $("#nama_file").show().prop('required', true)
+                    $("#produkfile_nama").hide();
                 }
             }
         });

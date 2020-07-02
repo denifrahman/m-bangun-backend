@@ -29,185 +29,240 @@
                 <!-- AKHIR: Aside Menu -->
             </div>
             <!-- AKHIR: Left Aside -->
-            <div class="m-grid__item m-grid__item--fluid m-wrapper">
-                <div class="m-content">
-                    <!--Begin::Section-->
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="m-portlet m-portlet--full-height  ">
-                                <div class="m-portlet__body">
-                                    <div class=" m--margin-top-10 m--hide">
-                                    </div>
-                                    <div class=" row" style='border-bottom:2px solid #ccc;margin-bottom:10px'>
-                                        <div class="row">
+            <form id="submit" method="POST">
+                <input type="hidden" name="produkid" id="produkid" value="0">
+                <input type="hidden" name="produkfile" id="produkfile">
+                <div class="m-grid__item m-grid__item--fluid m-wrapper">
+                    <div class="m-content">
+                        <!--Begin::Section-->
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="m-portlet m-portlet--full-height  ">
+                                    <div class="m-portlet__body">
+                                        <div class=" m--margin-top-10 m--hide">
+                                        </div>
+                                        <div class=" row" style='border-bottom:2px solid #ccc;margin-bottom:10px'>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h3 class="m-form__section">Detail Data :</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=" row" style='border-bottom:1px solid #8080801f;margin-bottom:10px'>
+                                            <div class="col-12 row" style="margin-bottom: 10px;">
+                                                <strong>
+                                                    Nama Requets
+                                                </strong>
+                                            </div>
                                             <div class="col-12">
-                                                <h3 class="m-form__section">Detail Data :</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=" row" style='border-bottom:1px solid #8080801f;margin-bottom:10px'>
-                                        <div class="col-12 row" style="margin-bottom: 10px;">
-                                            <strong>
-                                                Nama Requets
-                                            </strong>
-                                        </div>
-                                        <div class="col-12">
-                                            <p id="produknama">
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class=" row" style='border-bottom:1px solid #8080801f;margin-bottom:10px'>
-                                        <div class="col-12 row" style="margin-bottom: 10px;">
-                                            <strong>
-                                                Nama User
-                                            </strong>
-                                        </div>
-                                        <div class="col-12">
-                                            <p id="usernamalengkap">
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class=" row" style='border-bottom:1px solid #8080801f;margin-bottom:10px'>
-                                        <div class="col-12 row" style="margin-bottom: 10px;">
-                                            <strong>
-                                                Budget
-                                            </strong>
-                                        </div>
-                                        <div class="col-12">
-                                            <h6 id="produkbudget" style="color: green;">
-                                            </h6>
-                                        </div>
-                                    </div>
-                                    <div class=" row" style='border-bottom:1px solid #8080801f;margin-bottom:10px'>
-                                        <div class="col-12 row" style="margin-bottom: 10px;">
-                                            <strong>
-                                                Lokasi
-                                            </strong>
-                                        </div>
-                                        <div class="col-12">
-                                            <p id="produkalamat">
-                                            </p>
-                                            <div class="row col-12">
-                                                <p id="nama_kecamatan">
-                                                </p>
-                                                <p id="nama_kabkota">
-                                                </p>
-                                                <p id="nama_propinsi">
+                                                <p id="produknama">
                                                 </p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class=" row" style='border-bottom:1px solid #8080801f;margin-bottom:10px'>
-                                        <div class="col-12 row" style="margin-bottom: 10px;">
-                                            <strong>
-                                                Deskripsi
-                                            </strong>
+                                        <div class=" row" style='border-bottom:1px solid #8080801f;margin-bottom:10px'>
+                                            <div class="col-12 row" style="margin-bottom: 10px;">
+                                                <strong>
+                                                    Nama User
+                                                </strong>
+                                            </div>
+                                            <div class="col-12">
+                                                <p id="usernamalengkap">
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="col-12">
-                                            <p id="produkdeskripsi">
-                                            </p>
+                                        <div class=" row" style='border-bottom:1px solid #8080801f;margin-bottom:10px'>
+                                            <div class="col-12 row" style="margin-bottom: 10px;">
+                                                <strong>
+                                                    Budget
+                                                </strong>
+                                            </div>
+                                            <div class="col-12" style="margin-bottom: 10px;">
+                                                <div class="input-group m-input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text">Rp</span></div>
+                                                    <input name="produkbudget_view" id="produkbudget_view" type="text" class="form-control m-input" style="text-align:right; font-weight:bold; font-size: 15px" disabled required>
+                                                    <input name="produkbudget" id="produkbudget" type="hidden" class="form-control m-input" style="text-align:right; font-weight:bold; font-size: 15px" required>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class=" row" style='border-bottom:1px solid #8080801f;margin-bottom:10px'>
-                                        <div class="col-12 row" style="margin-bottom: 10px;">
-                                            <strong>
-                                                Waktu
-                                            </strong>
+                                        <div class=" row" style='border-bottom:1px solid #8080801f;margin-bottom:10px'>
+                                            <div class="col-12 row" style="margin-bottom: 10px;">
+                                                <strong>
+                                                    Budget Publish
+                                                </strong>
+                                            </div>
+                                            <div class="col-12" style="margin-bottom: 10px;">
+                                                <div class="input-group m-input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text">Rp</span></div>
+                                                    <input name="produkharga_view" id="produkharga_view" type="text" class="form-control m-input" style="text-align:right; font-weight:bold; font-size: 15px" disabled required>
+                                                    <input name="produkharga" id="produkharga" type="hidden" class="form-control m-input" style="text-align:right; font-weight:bold; font-size: 15px" required>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-12">
-                                            <p id="produkwaktupengerjaan">
-                                            </p>
+                                        <div class=" row" style='border-bottom:1px solid #8080801f;margin-bottom:10px'>
+                                            <div class="col-12 row" style="margin-bottom: 10px;">
+                                                <strong>
+                                                    Lokasi
+                                                </strong>
+                                            </div>
+                                            <div class="col-12">
+                                                <p id="produkalamat">
+                                                </p>
+                                                <div class="row col-12">
+                                                    <p id="nama_kecamatan">
+                                                    </p>
+                                                    <p id="nama_kabkota">
+                                                    </p>
+                                                    <p id="nama_propinsi">
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=" row" style='border-bottom:1px solid #8080801f;margin-bottom:10px'>
+                                            <div class="col-12 row" style="margin-bottom: 10px;">
+                                                <strong>
+                                                    Deskripsi
+                                                </strong>
+                                            </div>
+                                            <div class="col-12">
+                                                <p id="produkdeskripsi">
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class=" row" style='border-bottom:1px solid #8080801f;margin-bottom:10px'>
+                                            <div class="col-12 row" style="margin-bottom: 10px;">
+                                                <strong>
+                                                    Waktu
+                                                </strong>
+                                            </div>
+                                            <div class="col-12">
+                                                <p id="produkwaktupengerjaan">
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="m-portlet m-portlet--full-height  ">
-                                <div class="m-portlet__body">
-                                    <div class=" row">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <h3 class="m-form__section">Detail Foto :</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="m-card-profile">
+                            <div class="col-sm-8">
+                                <div class="m-portlet m-portlet--full-height  ">
+                                    <div class="m-portlet__body">
+                                        <div class=" row">
                                             <div class="row">
-                                                <div class="m-card-profile__pic col-2.4">
-                                                    <div class="m-card-profile__pic-wrapper">
-                                                        <img id="produkthumbnail" src="" style="width: 100px;height: 100px;">
-                                                    </div>
-                                                </div>
-                                                <div class="m-card-profile__pic col-2.4">
-                                                    <div class="m-card-profile__pic-wrapper">
-                                                        <img id="produkfoto1" src="" style="width: 100px;height: 100px;">
-                                                    </div>
-                                                </div>
-                                                <div class="m-card-profile__pic col-2.4">
-                                                    <div class="m-card-profile__pic-wrapper">
-                                                        <img id="produkfoto2" src="" style="width: 100px;height: 100px;">
-                                                    </div>
-                                                </div>
-                                                <div class="m-card-profile__pic col-2.4">
-                                                    <div class="m-card-profile__pic-wrapper">
-                                                        <img id="produkfoto3" src="" style="width: 100px;height: 100px;">
-                                                    </div>
-                                                </div>
-                                                <div class="m-card-profile__pic col-2.4">
-                                                    <div class="m-card-profile__pic-wrapper">
-                                                        <img id="produkfoto4" src="" style="width: 100px;height: 100px;">
-                                                    </div>
+                                                <div class="col-12">
+                                                    <h3 class="m-form__section">Detail Foto :</h3>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="m-portlet__body-separator">
-                                    </div>
-                                    <form id="formUpdate">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <label for="example-text-input" class="control-label">Status</label>
-                                                <div class="input-group m-input-group id_100">
-                                                    <select required class="form-control" id="select_1" style="width:100%" name="id_jenis_jadwal" require>
-                                                    </select>
+                                        <div class="col-12">
+                                            <div class="m-card-profile">
+                                                <div class="row">
+                                                    <div class="m-card-profile__pic col-2.4">
+                                                        <div class="m-card-profile__pic-wrapper">
+                                                            <img id="produkthumbnail" src="" style="width: 100px;height: 100px;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-card-profile__pic col-2.4">
+                                                        <div class="m-card-profile__pic-wrapper">
+                                                            <img id="produkfoto1" src="" style="width: 100px;height: 100px;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-card-profile__pic col-2.4">
+                                                        <div class="m-card-profile__pic-wrapper">
+                                                            <img id="produkfoto2" src="" style="width: 100px;height: 100px;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-card-profile__pic col-2.4">
+                                                        <div class="m-card-profile__pic-wrapper">
+                                                            <img id="produkfoto3" src="" style="width: 100px;height: 100px;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-card-profile__pic col-2.4">
+                                                        <div class="m-card-profile__pic-wrapper">
+                                                            <img id="produkfoto4" src="" style="width: 100px;height: 100px;">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="m-portlet__body-separator">
                                         </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <label for="example-text-input" class="control-label">Kategori</label>
-                                                <div class="input-group m-input-group">
-                                                    <select required class="form-control" id="select_2" style="width:100%" name="id_jenis_jadwal" require>
-                                                        <option value="0" disabled selected>Pilih Kategori</option>
-                                                    </select>
+                                        <form id="formUpdate">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <label for="example-text-input" class="control-label">Status</label>
+                                                    <div class="input-group m-input-group id_100">
+                                                        <select required class="form-control" id="select_1" style="width:100%" name="produkstatusid" require>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="example-text-input" class="control-label">Persentase</label>
+                                                    <div class="input-group m-input-group">
+                                                        <input name="produkpersentase" id="produkpersentase" type="number" class="form-control m-input" style="text-align:right; font-weight:bold; font-size: 15px" required>
+                                                        <div class="input-group-prepend"><span class="input-group-text">%</span></div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
-                                                <label for="example-text-input" class="control-label">Kategori</label>
-                                                <div class="input-group m-input-group">
-                                                    <select required class="form-control" id="select_3" style="width:100%" require>
-                                                        <option value="0" disabled selected>Pilih Sub</option>
-                                                    </select>
+                                            <div class="m-portlet__body-separator">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <label for="example-text-input" class="control-label">Penyedia Jasa</label>
+                                                    <div class="input-group m-input-group">
+                                                        <select required class="form-control" id="select_2" style="width:100%" name="produkkategoriid" require>
+                                                            <option value="0" disabled selected>Pilih Kategori</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="example-text-input" class="control-label">Sub Penyedia Jasa</label>
+                                                    <div class="input-group m-input-group">
+                                                        <select required class="form-control" name="produkkategorisubid" id="select_3" style="width:100%" require>
+                                                            <option value="0" disabled selected>Pilih Sub</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </form>
+                                            <div class="m-portlet__body-separator">
+                                            </div>
+                                            <div class="row">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <h3 class="m-form__section">File Rab :</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div id="file_hidden">
+                                                    <div class="col-12">
+                                                        <label for="example-text-input" class="control-label">Pilihan File</label>
+                                                        <div class="input-group m-input-group">
+                                                            <input type="file" id="nama_file" name="nama_file" accept="application/pdf" multiple required />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="file_hapus">
+                                                    <div class="col-6">
+                                                        <label for="example-text-input" class="control-label" id="produkfile_nama"></label>
+                                                        <div class="input-group m-input-group">
+                                                            <label onclick="hapusFile()" class="btn btn-pill btn-danger">Hapus</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="m-portlet__body-separator">
+                                            </div>
+                                            <div style="display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;margin-left: .25rem;-ms-flex-pack: end;justify-content: flex-end;">
+                                                <button class="btn btn-success" id="btn_upload" type="submit">Simpan</button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!--End::Section-->
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                        <button type="button" class="btn btn-primary" onclick="updateStatus()">Simpan</button>
-                    </div>
-
-                    <!--End::Section-->
                 </div>
-            </div>
+            </form>
         </div>
         <!-- akhir:: Body -->
         <!-- Button trigger modal -->
@@ -260,6 +315,45 @@
             $("#select_2").change(function() {
                 var kategoriid = $("#select_2").val();
                 setSubKategori(kategoriid);
+            });
+            $("#produkpersentase").on("keyup", function(event) {
+                var hitungPersentase = parseInt($("#produkbudget").val()) * parseInt($("#produkpersentase").val()) / 100;
+                $('#produkharga_view').val(format_number(parseInt($("#produkbudget").val()) + hitungPersentase));
+                $('#produkharga').val(parseInt($("#produkbudget").val()) + hitungPersentase);
+                console.log($("#produkbudget").val())
+            });
+
+            $('#submit').submit(function(e) {
+                swal({
+                    title: "",
+                    text: "Tunggu Sebentar...",
+                    imageUrl: baseURL + "assets/images/ajax-loader.gif",
+                    showConfirmButton: false,
+                    closeOnClickOutside: false,
+                    allowOutsideClick: false,
+                    imageWidth: 30,
+                    imageHeight: 30,
+                });
+                e.preventDefault();
+                url = "<?= API_POST ?>Produk/updateStatus",
+                    type = "POST"
+                $.ajax({
+                    url: url,
+                    type: "post",
+                    data: new FormData(this),
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    async: false,
+                    success: function(result) {
+                        if (result.status) {
+                            swal({
+                                title: "Data Berhsil Di Simpan",
+                                type: "success"
+                            });
+                        }
+                    }
+                });
             });
         });
 
@@ -366,32 +460,10 @@
             }
         }
 
-        function updateStatus() {
-            if (($("#select_2").val() == null || $("#select_2").val() == '') && $("#select_3").val() == null || $("#select_3").val() == '') {
-                toastr.error("Silahkan pilih kategori");
-            } else {
-                $.ajax({
-                    type: "POST",
-                    url: "<?= API_POST ?>Produk/updateStatus",
-                    data: JSON.stringify({
-                        "produkid": $("#produkid").val(),
-                        "produkstatusid": $("#select_1").val(),
-                        "produkkategorisubid": $("#select_3").val(),
-                        "produkkategoriid": $("#select_2").val()
-                    }),
-                    success: function(result) {
-                        if (result.status) {
-                            toastr.success("Status berhasil di perbarui");
-                            $('#modal_detail_request').modal('hide');
-                        } else {
-                            toastr.error("Status berhasil di perbarui");
-                        }
-                    }
-                });
-            }
-        }
-
         function detailRequest(id) {
+            $("#nama_file").val('');
+            $('#produkharga_view').val('');
+            $('#produkharga').val('');
             swal({
                 title: "",
                 text: "Tunggu Sebentar...",
@@ -410,7 +482,25 @@
                 success: function(result) {
                     if (result.status) {
                         swal.close();
+                        // $("#modal_detail_request").modal({
+                        //     show: true,
+                        //     backdrop: 'static',
+                        //     keyboard: false
+                        // });
+                        console.log(result.data.produkfile == null);
+                        if (result.data.produkfile == null || result.data.produkfile == '') {
+                            $("#file_hidden").show();
+                            $("#nama_file").show().prop('required', true)
+                            $("#file_hapus").hide();
+                        } else {
+                            $("#produkfile_nama").show();
+                            $("#produkfile_nama").text(result.data.produkfile);
+                            $("#file_hidden").hide();
+                            $("#nama_file").hide().prop('required', false)
+                            $("#file_hapus").show();
+                        }
                         $("#produknama").text(result.data.produknama);
+                        $("#produkfile").val('file_rab_' + result.data.produkid + '.pdf');
                         $("#produkthumbnail").attr("src", result.data.produkthumbnail);
                         $("#produkfoto1").attr("src", result.data.produkfoto1);
                         $("#produkfoto2").attr("src", result.data.produkfoto2);
@@ -427,13 +517,36 @@
                         setKategori(result.data.produkkategoriid);
                         setSubKategori(result.data.produkkategoriid, result.data.produkkategorisubid);
                         $("#produkid").val(result.data.produkid);
-                        $("#produkbudget").text('Rp ' + format_number(result.data.produkbudget));
+                        $("#produkbudget_view").val(format_number(result.data.produkbudget));
+                        $("#produkbudget").val(result.data.produkbudget);
                         $("#produkwaktupengerjaan").val(result.data.produkwaktupengerjaan);
+                        $("#produkpersentase").val(result.data.produkpersentase);
+                        $("#produkharga").val(result.data.produkharga);
+                        $("#produkharga_view").val(format_number(result.data.produkharga));
                         if (result.data.produkaktif == 1) {
                             $("#produkaktif").prop('checked', true);
                         } else {
                             $("#produkaktif").prop('checked', false);
                         }
+                    }
+                }
+            });
+        }
+
+        function hapusFile() {
+            var namaFile = $("#produkfile").val();
+            var produkid = $("#produkid").val();
+            $.ajax({
+                type: "GET",
+                url: "<?= API_GET ?>/Produk/deleteFileByNama/" + namaFile + '/' + produkid,
+                cache: false,
+                dataType: "json",
+                success: function(result) {
+                    if (result.status) {
+                        $("#file_hidden").show();
+                        $("#file_hapus").hide();
+                        $("#nama_file").show().prop('required', true)
+                        $("#produkfile_nama").hide();
                     }
                 }
             });

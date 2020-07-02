@@ -115,6 +115,12 @@
     <script>
         const id_member = "<?= $this->session->userdata('data_profil')->userid ?>"
         $(document).ready(function() {
+            $("#produkpersentase").on("keyup", function(event) {
+                var hitungPersentase = parseInt($("#produkbudget").val()) * parseInt($("#produkpersentase").val()) / 100;
+                $('#produkharga_view').val(format_number(parseInt($("#produkbudget").val()) + hitungPersentase));
+                $('#produkharga').val(parseInt($("#produkbudget").val()) + hitungPersentase);
+                console.log($("#produkbudget").val())
+            });
             getNewRequestTable();
             setStatus();
             setKategori();
@@ -139,63 +145,45 @@
                 var kategoriid = $("#select_2").val();
                 setSubKategori(kategoriid);
             });
+            $('#submit').submit(function(e) {
+                swal({
+                    title: "",
+                    text: "Tunggu Sebentar...",
+                    imageUrl: baseURL + "assets/images/ajax-loader.gif",
+                    showConfirmButton: false,
+                    closeOnClickOutside: false,
+                    allowOutsideClick: false,
+                    imageWidth: 30,
+                    imageHeight: 30,
+                });
+                e.preventDefault();
+                url = "<?= API_POST ?>Produk/updateStatus",
+                type = "POST"
+                $.ajax({
+                    url: url,
+                    type: "post",
+                    data: new FormData(this),
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    async: false,
+                    success: function(result) {
+                        if (result.status) {
+                            $("#nama_file").val('');
+                            reload_table();
+                            $('#modal_detail_request').modal('hide');
+                            swal({
+                                title: "Data Berhsil Di Simpan",
+                                type: "success"
+                            });
+                        }
+                    }
+                });
+            });
         });
 
         function reload_table() {
             table.ajax.reload(null, false); //reload datatable ajax
-        }
-
-        function detailRequest(id) {
-            swal({
-                title: "",
-                text: "Tunggu Sebentar...",
-                imageUrl: baseURL + "assets/images/ajax-loader.gif",
-                showConfirmButton: false,
-                closeOnClickOutside: false,
-                allowOutsideClick: false,
-                imageWidth: 30,
-                imageHeight: 30,
-            });
-            $.ajax({
-                type: "GET",
-                url: "<?= API_GET ?>/Produk/getById/" + id,
-                cache: false,
-                dataType: "json",
-                success: function(result) {
-                    if (result.status) {
-                        swal.close();
-                        $("#modal_detail_request").modal({
-                            show: true,
-                            backdrop: 'static',
-                            keyboard: false
-                        });
-                        $("#produknama").text(result.data.produknama);
-                        $("#produkthumbnail").attr("src", result.data.produkthumbnail);
-                        $("#produkfoto1").attr("src", result.data.produkfoto1);
-                        $("#produkfoto2").attr("src", result.data.produkfoto2);
-                        $("#produkfoto3").attr("src", result.data.produkfoto3);
-                        $("#produkfoto4").attr("src", result.data.produkfoto4);
-                        $("#produkdeskripsi").text(result.data.produkdeskripsi);
-                        $("#nama_propinsi").text(result.data.nama_propinsi);
-                        $("#nama_kabkota").text(result.data.nama_kabkota + ', ');
-                        $("#nama_kecamatan").text(result.data.nama_kecamatan + ', ');
-                        $("#usernamalengkap").text(result.data.usernamalengkap);
-                        $("#produkalamat").text(result.data.produkalamat);
-                        $("#produkwaktupengerjaan").text(result.data.produkwaktupengerjaan);
-                        setStatus(result.data.produkstatusid);
-                        setKategori(result.data.produkkategoriid);
-                        setSubKategori(result.data.produkkategoriid, result.data.produkkategorisubid);
-                        $("#produkid").val(result.data.produkid);
-                        $("#produkbudget").text('Rp ' + format_number(result.data.produkbudget));
-                        $("#produkwaktupengerjaan").val(result.data.produkwaktupengerjaan);
-                        if (result.data.produkaktif == 1) {
-                            $("#produkaktif").prop('checked', true);
-                        } else {
-                            $("#produkaktif").prop('checked', false);
-                        }
-                    }
-                }
-            });
         }
     </script>
 

@@ -39,6 +39,11 @@
                                     <div class=" m--margin-top-10 m--hide">
                                     </div>
                                     <div class="row">
+                                        <div class="col-12 row" style="margin-bottom: 10px;">
+                                            <strong>
+                                                User Bid
+                                            </strong>
+                                        </div>
                                         <span style="width: 250px;">
                                             <div class="d-flex align-items-center">
                                                 <div class="symbol symbol-40 symbol-circle symbol-sm">
@@ -71,7 +76,7 @@
                                     <div class=" row" style='border-bottom:1px solid #8080801f;margin-bottom:10px'>
                                         <div class="col-12 row" style="margin-bottom: 10px;">
                                             <strong>
-                                                Nama User
+                                                Owner
                                             </strong>
                                         </div>
                                         <div class="col-12">

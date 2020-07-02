@@ -44,6 +44,10 @@
                     visible: false
                 },
                 {
+                    targets: 0,
+                    visible: false
+                },
+                {
                     targets: 1,
                     visible: false
                 }
