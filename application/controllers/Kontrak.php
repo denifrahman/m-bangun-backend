@@ -45,8 +45,8 @@ class Kontrak extends CI_Controller
         $produkid = $this->input->get('id', TRUE);
         $this->load->library('pdf');
         $data['kontrak'] = json_decode(request_api_get(API_GET . '/Kontrak/getKontrakByProdukId/' . $produkid, false))->data;
-            // var_dump($data['kontrak']);
-            // die;
+        // var_dump($data['kontrak']);
+        // die;
         $this->pdf->setPaper('A4', 'potrait');
         $this->pdf->filename = "laporan-petanikode.pdf";
         $this->pdf->load_view('kontrak/v_kontrak_pdf', $data);
@@ -56,16 +56,19 @@ class Kontrak extends CI_Controller
     {
         $produkid = $this->input->get('id', TRUE);
         $data['kontrak'] = json_decode(request_api_get(API_GET . '/Kontrak/getKontrakByProdukId/' . $produkid, false));
-        // var_dump($data['kontrak']->data->owner_nama);
+        // var_dump($data['kontrak']->data->owner_signature);
         // die;
         $signature_worker = '';
         $signature_owner = '';
         if ($data['kontrak']->data->worker_signature == NULL) {
             $signature_worker = '<td style="text-align: center; "><img src="' . base_url() . 'assets/images/logo/logo.png" alt="images" width="100px" style="opacity: 0.1;"></td>';
+        } else {
+            $signature_worker = '<td style="text-align: center; "><img src="' . API . 'assets/'. $data['kontrak']->data->worker_signature . '" alt="images" width="100px"></td>';
+        }
+        if ($data['kontrak']->data->owner_signature == NULL) {
             $signature_owner = '<td style="text-align: center; "><img src="' . base_url() . 'assets/images/logo/logo.png" alt="images" width="100px" style="opacity: 0.1;"></td>';
         } else {
-            $signature_worker = '<td style="text-align: center; "><img src="' . base_url() . 'assets/images/signature/signature_worker_' . $data['kontrak']->data->worker_signature . '" alt="images" width="100px"></td>';
-            $signature_owner = '<td style="text-align: center; "><img src="' . base_url() . 'assets/images/signature/signature_owner_' . $data['kontrak']->data->worker_signature . '" alt="images" width="100px"></td>';
+            $signature_owner = '<td style="text-align: center; "><img src="' . API . 'assets/'. $data['kontrak']->data->owner_signature . '" alt="images" width="100px"></td>';
         }
 
         $view = '<div id="body">' . $data['kontrak']->data->kontrakbody . '</div>
@@ -82,8 +85,8 @@ class Kontrak extends CI_Controller
             </tr>
             <tr>
                 <td style="text-align: center; ">m-Bangun</td>
-                <td style="text-align: center; ">'.$data['kontrak']->data->owner_nama.'</td>
-                <td style="text-align: center; ">'.$data['kontrak']->data->worker_nama.'</td>
+                <td style="text-align: center; ">' . $data['kontrak']->data->owner_nama . '</td>
+                <td style="text-align: center; ">' . $data['kontrak']->data->worker_nama . '</td>
             </tr>
         </table>';
         echo $view;
