@@ -388,7 +388,7 @@
         }
 
         function previewKontrak() {
-            window.open('<?= base_url() ?>kontrak/print?id=' + getParameterByName('id'), '_blank');
+            window.open('<?= base_url() ?>kontrak/pdf?id=' + getParameterByName('id'), '_blank');
         }
     </script>
 
