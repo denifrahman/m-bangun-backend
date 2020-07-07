@@ -17,7 +17,7 @@ class Invoice extends CI_Controller
         $produkid = $this->input->get('id', TRUE);
         $data['data_user_bid'] = json_decode(request_api_get(API_GET . '/Bid/getBidByProdukId/' . $produkid, false))->data;
         $data['invoice'] = json_decode(request_api_get(API_GET . '/Invoice/getInvoiceByProdukId/' . $produkid, false))->data;
-        // var_dump($data['invoice']);
+        // var_dump($data['data_user_bid']);
         // die;
         if ($data['data_user_bid'] != null) {
             $this->load->view('invoice/v_invoice', $data);
