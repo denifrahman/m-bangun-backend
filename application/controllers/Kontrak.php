@@ -53,13 +53,13 @@ class Kontrak extends CI_Controller
         if ($data['kontrak']->worker_signature == null) {
             $data['kontrak']->worker_signature = $this->encode_img_base64('http://administrator.m-bangun.com/assets/images/logo/lpp-logo.jpeg');
         } else {
-            $data['kontrak']->worker_signature = $this->encode_img_base64(base_url() . '/assets/' . $data['kontrak']->worker_signature);
+            $data['kontrak']->worker_signature = $this->encode_img_base64(API . '/assets/' . $data['kontrak']->worker_signature);
         }
 
         if ($data['kontrak']->owner_signature == null) {
             $data['kontrak']->owner_signature = $this->encode_img_base64('http://administrator.m-bangun.com/assets/images/logo/lpp-logo.jpeg');
         } else {
-            $data['kontrak']->owner_signature = $this->encode_img_base64(base_url() . '/assets/' . $data['kontrak']->owner_signature);
+            $data['kontrak']->owner_signature = $this->encode_img_base64(API . '/assets/' . $data['kontrak']->owner_signature);
         }
         $this->pdf->setPaper('A4', 'potrait');
         $this->pdf->filename = "laporan-petanikode.pdf";
