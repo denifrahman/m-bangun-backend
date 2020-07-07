@@ -43,13 +43,13 @@ class Kontrak extends CI_Controller
     public function pdf()
     {
         $produkid = $this->input->get('id', TRUE);
-        $this->load->library('Pdf');
+        $this->load->library('pdf');
         $data['kontrak'] = json_decode(request_api_get(API_GET . '/Kontrak/getKontrakByProdukId/' . $produkid, false))->data;
         // var_dump($data['kontrak']);
         // die;
         $this->pdf->setPaper('A4', 'potrait');
         $this->pdf->filename = "laporan-petanikode.pdf";
-        $this->pdf->load_view('kontrak/v_kontrak_pdf', $data);
+        $this->pdf->load_view('kontrak/Pdf', $data);
     }
 
     public function print()
