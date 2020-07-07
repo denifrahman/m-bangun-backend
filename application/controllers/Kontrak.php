@@ -43,7 +43,7 @@ class Kontrak extends CI_Controller
     public function pdf()
     {
         $produkid = $this->input->get('id', TRUE);
-        $this->load->library('pdf');
+        $this->load->library('Pdf');
         $data['kontrak'] = json_decode(request_api_get(API_GET . '/Kontrak/getKontrakByProdukId/' . $produkid, false))->data;
         // var_dump($data['kontrak']);
         // die;
@@ -61,14 +61,14 @@ class Kontrak extends CI_Controller
         $signature_worker = '';
         $signature_owner = '';
         if ($data['kontrak']->data->worker_signature == NULL) {
-            $signature_worker = '<td style="text-align: center; "><img src="' . base_url() . 'assets/images/logo/logo.png" alt="images" width="100px" style="opacity: 0.1;"></td>';
+            $signature_worker = '<td style="text-align: center; "><img src="' . base_url() . '/assets/images/logo/logo.png" alt="images" width="100px" style="opacity: 0.1;"></td>';
         } else {
-            $signature_worker = '<td style="text-align: center; "><img src="' . API . 'assets/'. $data['kontrak']->data->worker_signature . '" alt="images" width="100px"></td>';
+            $signature_worker = '<td style="text-align: center; "><img src="' . API . '/assets/'. $data['kontrak']->data->worker_signature . '" alt="images" width="100px"></td>';
         }
         if ($data['kontrak']->data->owner_signature == NULL) {
-            $signature_owner = '<td style="text-align: center; "><img src="' . base_url() . 'assets/images/logo/logo.png" alt="images" width="100px" style="opacity: 0.1;"></td>';
+            $signature_owner = '<td style="text-align: center; "><img src="' . base_url() . '/assets/images/logo/logo.png" alt="images" width="100px" style="opacity: 0.1;"></td>';
         } else {
-            $signature_owner = '<td style="text-align: center; "><img src="' . API . 'assets/'. $data['kontrak']->data->owner_signature . '" alt="images" width="100px"></td>';
+            $signature_owner = '<td style="text-align: center; "><img src="' . API . '/assets/'. $data['kontrak']->data->owner_signature . '" alt="images" width="100px"></td>';
         }
 
         $view = '<div id="body">' . $data['kontrak']->data->kontrakbody . '</div>
@@ -79,9 +79,9 @@ class Kontrak extends CI_Controller
                 <th style=" height: 80px;vertical-align: top;">Pihak ketiga</th>
             </tr>
             <tr>
+            <td style="text-align: center; "><img src="' . base_url() . 'assets/images/logo/logo.png" alt="images" width="100px" style="opacity: 0.1;"></td>
             ' . $signature_owner . '
             ' . $signature_worker . '
-                <td style="text-align: center; "><img src="' . base_url() . 'assets/images/logo/logo.png" alt="images" width="100px" style="opacity: 0.1;"></td>
             </tr>
             <tr>
                 <td style="text-align: center; ">m-Bangun</td>
@@ -90,5 +90,13 @@ class Kontrak extends CI_Controller
             </tr>
         </table>';
         echo $view;
+    }
+    function encode_img_base64($img_path = false)
+    {
+        if ($img_path) {
+            return base64_encode(file_get_contents($img_path));
+        }
+
+        return false;
     }
 }

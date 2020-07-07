@@ -15,46 +15,45 @@
 
 <script>
     function getListBidding() {
-        $("#table_list_bidding").DataTable().destroy();
-        table = $("#table_list_bidding").DataTable({
-            "scrollCollapse": !0,
-            "scrollX": true,
-            "scrollCollapse": true,
-            "processing": true, //Feature control the processing indicator.
-            "serverSide": true, //Feature control DataTables' server-side processing mode.
-            "order": [], //Initial no order.
-            // Load data for the table's content from an Ajax source
-            "ajax": {
-                "url": "<?= API_GET ?>Bid/getBid",
-                "type": "POST",
-                "data": {
-                    "status": 'New'
-                }
-            },
-            "drawCallback": function() {
-                $(this.api().table().header()).hide();
-            },
-            //Set column definition initialisation properties.
-            rowGroup: {
-                dataSrc: 1
-            },
-            "columnDefs": [{
-                    targets: 1,
-                    visible: false
+        setTimeout(function() {
+            $("#table_list_bidding").DataTable().destroy();
+            table = $("#table_list_bidding").DataTable({
+                "scrollCollapse": !0,
+                "scrollX": true,
+                "scrollCollapse": true,
+                "processing": true, //Feature control the processing indicator.
+                "serverSide": true, //Feature control DataTables' server-side processing mode.
+                "order": [], //Initial no order.
+                // Load data for the table's content from an Ajax source
+                "ajax": {
+                    "url": "<?= API_GET ?>Bid/getBid",
+                    "type": "POST",
+                    "data": {
+                        "status": 'New'
+                    }
                 },
-                {
-                    targets: 0,
-                    visible: false
+                "drawCallback": function() {
+                    $(this.api().table().header()).hide();
                 },
-                {
-                    targets: 1,
-                    visible: false
-                }
-            ],
-        });
+                //Set column definition initialisation properties.
+                rowGroup: {
+                    dataSrc: 1
+                },
+                "columnDefs": [{
+                        targets: 1,
+                        visible: false
+                    },
+                    {
+                        targets: 0,
+                        visible: false
+                    },
+                    {
+                        targets: 1,
+                        visible: false
+                    }
+                ],
+            });
+        }, 150);
 
-        function UpdateBid(id) {
-
-        }
     }
 </script>

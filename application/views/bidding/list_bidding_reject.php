@@ -12,35 +12,38 @@
 </table>
 <script>
     function getListBiddingReject() {
-        $("#table_list_bidding_reject").DataTable().destroy();
-        table = $("#table_list_bidding_reject").DataTable({
-            "scrollCollapse": !0,
-            "scrollX": true,
-            "scrollCollapse": true,
-            "processing": true, //Feature control the processing indicator.
-            "serverSide": true, //Feature control DataTables' server-side processing mode.
-            "order": [], //Initial no order.
-            // Load data for the table's content from an Ajax source
-            "ajax": {
-                "url": "<?= API_GET ?>Bid/getBid",
-                "type": "POST",
-                "data": {
-                    "status": 'Ditolak'
-                }
-            },
-            rowGroup: {
-                dataSrc: 1
-            },
-            "columnDefs": [{
-                    targets: 1,
-                    visible: false
+        setTimeout(function() {
+            $("#table_list_bidding_reject").DataTable().destroy();
+            table = $("#table_list_bidding_reject").DataTable({
+                "scrollCollapse": !0,
+                "scrollX": true,
+                "scrollCollapse": true,
+                "processing": true, //Feature control the processing indicator.
+                "serverSide": true, //Feature control DataTables' server-side processing mode.
+                "order": [], //Initial no order.
+                // Load data for the table's content from an Ajax source
+                "ajax": {
+                    "url": "<?= API_GET ?>Bid/getBid",
+                    "type": "POST",
+                    "data": {
+                        "status": 'Ditolak'
+                    }
                 },
-                {
-                    targets: 1,
-                    visible: false
-                }
-            ],
+                rowGroup: {
+                    dataSrc: 1
+                },
+                "columnDefs": [{
+                        targets: 1,
+                        visible: false
+                    },
+                    {
+                        targets: 1,
+                        visible: false
+                    }
+                ],
 
-        });
+            });
+        }, 150);
+
     }
 </script>

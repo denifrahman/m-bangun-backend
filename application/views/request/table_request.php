@@ -13,29 +13,33 @@
 <script>
     function getNewRequestTable() {
         $("#table_request_new").DataTable().destroy();
-        table = $("#table_request_new").DataTable({
-            "scrollCollapse": !0,
-            "scrollX": true,
-            // "scrollY": "400px",
-            "scrollCollapse": true,
-            "processing": true, //Feature control the processing indicator.
-            "serverSide": true, //Feature control DataTables' server-side processing mode.
-            "order": [], //Initial no order.
-            // Load data for the table's content from an Ajax source
-            "ajax": {
-                "url": "<?= API_GET ?>Produk/getRequest",
-                "type": "POST",
-                "data": {
-                    "status": 'New',
-                    "aktif": '1'
-                }
-            },
-            //Set column definition initialisation properties.
-            "columnDefs": [{
-                "targets": -1, //first column / numbering column
-                "orderable": !1, //set not orderable
-            }, ],
+        setTimeout(function() {
+            table = $("#table_request_new").DataTable({
+                "scrollCollapse": !0,
+                "scrollX": true,
+                // "scrollY": "400px",
+                "scrollCollapse": true,
+                "processing": true, //Feature control the processing indicator.
+                "serverSide": true, //Feature control DataTables' server-side processing mode.
+                "order": [], //Initial no order.
+                // Load data for the table's content from an Ajax source
+                "ajax": {
+                    "url": "<?= API_GET ?>Produk/getRequest",
+                    "type": "POST",
+                    "data": {
+                        "status": 'New',
+                        "aktif": '1'
+                    }
+                },
+                //Set column definition initialisation properties.
+                "columnDefs": [{
+                    "targets": -1, //first column / numbering column
+                    "orderable": !1, //set not orderable
+                }, ],
 
-        });
+            });
+        }, 150);
+
+
     }
 </script>
