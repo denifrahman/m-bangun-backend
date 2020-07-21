@@ -15,7 +15,7 @@ class Toko extends CI_Controller
 
     public function index()
     {
-        $this->load->view('Toko/main_v');
+        $this->load->view('toko/main_v');
     }
     public function page()
     {
