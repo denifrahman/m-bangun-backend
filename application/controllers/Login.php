@@ -50,13 +50,15 @@ class Login extends CI_Controller
                 );
                 //set session dari data yang telah diambil sebelumnya dari api
                 $this->session->set_userdata($set_session);
-                if ($send->data->status_pembayaran_nama == 'BELUM') {
+                // var_dump($send);
+                // die;
+                if ($send->data->userroleid == '3' || $send->data->userroleid == '1') {
 
                     $this->session->set_flashdata('perintah_benar', 'Pembayaran belum di konfirmasi'); //menSet flashdata digunakan untuk toast
-                    redirect(base_url('daftar')); //Redirect ke halaman lain jika pengecekan mendapat hasil satu atau berhasil
+                    redirect(base_url('dashboard')); //Redirect ke halaman lain jika pengecekan mendapat hasil satu atau berhasil
                 } else {
                     $this->session->set_flashdata('perintah_benar', 'Berhasil Login'); //menSet flashdata digunakan untuk toast
-                    redirect(base_url('dashboard')); //Redirect ke halaman lain jika pengecekan mendapat hasil satu atau berhasil
+                    redirect(base_url('login')); //Redirect ke halaman lain jika pengecekan mendapat hasil satu atau berhasil
                 }
             } else {
                 $this->session->set_flashdata('perintah_salah', 'Gagal Login, Silahkan coba lagi!'); //menSet flashdata digunakan untuk toast

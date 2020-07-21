@@ -40,29 +40,42 @@ $menu_3 = $this->session->flashdata('menu_3');
                </ul>
             </div>
          </li>
+         <li class="m-menu__item  m-menu__item <?php
+                                                if ($menu_1 == 'request') {
+                                                   echo 'm-menu__item--active';
+                                                }
+                                                ?>" aria-haspopup="true" style="margin-top:0px;">
+            <a href="<?= base_url('request') ?>" class="m-menu__link "><i class="m-menu__link-icon flaticon-line-graph"></i>
+               <span class="m-menu__link-title">
+                  <span class="m-menu__link-wrap">
+                     <span class="m-menu__link-text">Request</span>
+                  </span>
+               </span>
+            </a>
+         </li>
+         <li class="m-menu__item  m-menu__item <?php
+                                                if ($menu_1 == 'bidding') {
+                                                   echo 'm-menu__item--active';
+                                                }
+                                                ?>" aria-haspopup="true" style="margin-top:0px;">
+            <a href="<?= base_url('bidding') ?>" class="m-menu__link "><i class="m-menu__link-icon flaticon-line-graph"></i>
+               <span class="m-menu__link-title">
+                  <span class="m-menu__link-wrap">
+                     <span class="m-menu__link-text">Bidding</span>
+                  </span>
+               </span>
+            </a>
+         </li>
       <?php } ?>
       <li class="m-menu__item  m-menu__item <?php
-                                             if ($menu_1 == 'request') {
+                                             if ($menu_1 == 'toko') {
                                                 echo 'm-menu__item--active';
                                              }
                                              ?>" aria-haspopup="true" style="margin-top:0px;">
-         <a href="<?= base_url('request') ?>" class="m-menu__link "><i class="m-menu__link-icon flaticon-line-graph"></i>
+         <a href="<?= base_url('toko') ?>" class="m-menu__link "><i class="m-menu__link-icon flaticon-line-graph"></i>
             <span class="m-menu__link-title">
                <span class="m-menu__link-wrap">
-                  <span class="m-menu__link-text">Request</span>
-               </span>
-            </span>
-         </a>
-      </li>
-      <li class="m-menu__item  m-menu__item <?php
-                                             if ($menu_1 == 'bidding') {
-                                                echo 'm-menu__item--active';
-                                             }
-                                             ?>" aria-haspopup="true" style="margin-top:0px;">
-         <a href="<?= base_url('bidding') ?>" class="m-menu__link "><i class="m-menu__link-icon flaticon-line-graph"></i>
-            <span class="m-menu__link-title">
-               <span class="m-menu__link-wrap">
-                  <span class="m-menu__link-text">Bidding</span>
+                  <span class="m-menu__link-text">Toko</span>
                </span>
             </span>
          </a>

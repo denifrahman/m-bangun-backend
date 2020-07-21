@@ -4,6 +4,8 @@
             <th>No</th>
             <th>Nama</th>
             <th>Alamat</th>
+            <th>NIK</th>
+            <th>NIB</th>
             <th>Tanggal Daftar</th>
             <th>Jenis Akun</th>
             <th></th>

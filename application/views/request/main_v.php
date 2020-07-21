@@ -56,6 +56,9 @@
                                         <li class="nav-item">
                                             <a class="nav-link" onclick="getNewRequestTableFinish()" data-toggle="tab" href="#kt_tab_pane_6">Finish</a>
                                         </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" onclick="getNewRequestTableDitolak()" data-toggle="tab" href="#kt_tab_pane_7">Ditolak</a>
+                                        </li>
                                     </ul>
                                     <div class="tab-content mt-5" id="myTabContent">
                                         <div class="tab-pane fade show active" id="kt_tab_pane_1" role="tabpanel" aria-labelledby="kt_tab_pane_1">
@@ -75,6 +78,9 @@
                                         </div>
                                         <div class="tab-pane fade" id="kt_tab_pane_6" role="tabpanel" aria-labelledby="kt_tab_pane_6">
                                             <?php $this->load->view('request/table_finish') ?>
+                                        </div>
+                                        <div class="tab-pane fade" id="kt_tab_pane_7" role="tabpanel" aria-labelledby="kt_tab_pane_7">
+                                            <?php $this->load->view('request/table_ditolak') ?>
                                         </div>
                                     </div>
                                 </div>
@@ -158,7 +164,7 @@
                 });
                 e.preventDefault();
                 url = "<?= API_POST ?>Produk/updateStatus",
-                type = "POST"
+                    type = "POST"
                 $.ajax({
                     url: url,
                     type: "post",
