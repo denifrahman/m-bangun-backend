@@ -32,7 +32,7 @@ class Toko extends CI_Controller
         $data["links"] = explode('&nbsp;', $str_links);
         var_dump($data['links']);
         die;
-        $this->load->view('Toko/main_v', $data);
+        $this->load->view('toko/main_v', $data);
     }
     public function nama()
     {
