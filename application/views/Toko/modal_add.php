@@ -120,7 +120,7 @@
                                                     </div>
                                                     <div class="input-group m-input-group">
                                                         <input type="file" id="produkthumbnail" name="berkas[]" accept="image/png, image/jpeg" multiple required />
-                                                        <input type="hidden" id="produkthumbnail_edit" name="produkthumbnail_edit" />
+                                                        <input type="hidden" id="produkthumbnail_edit" name="foto_edit[]" />
                                                     </div>
                                                 </div>
                                                 <div class="m-card-profile__pic col-2.4">
@@ -129,7 +129,7 @@
                                                     </div>
                                                     <div class="input-group m-input-group">
                                                         <input type="file" id="produkfoto1" name="berkas[]" accept="image/png, image/jpeg" multiple required />
-                                                        <input type="hidden" id="produkfoto1_edit" name="produkfoto1_edit" />
+                                                        <input type="hidden" id="produkfoto1_edit" name="foto_edit[]" />
                                                     </div>
                                                 </div>
                                                 <div class="m-card-profile__pic col-2.4">
@@ -138,7 +138,7 @@
                                                     </div>
                                                     <div class="input-group m-input-group">
                                                         <input type="file" id="produkfoto2" name="berkas[]" accept="image/png, image/jpeg" multiple required />
-                                                        <input type="hidden" id="produkfoto2_edit" name="produkfoto2_edit" />
+                                                        <input type="hidden" id="produkfoto2_edit" name="foto_edit[]" />
                                                     </div>
                                                 </div>
                                                 <div class="m-card-profile__pic col-2.4">
@@ -147,7 +147,7 @@
                                                     </div>
                                                     <div class="input-group m-input-group">
                                                         <input type="file" id="produkfoto3" name="berkas[]" accept="image/png, image/jpeg" multiple required />
-                                                        <input type="hidden" id="produkfoto3_edit" name="produkfoto3_edit" />
+                                                        <input type="hidden" id="produkfoto3_edit" name="foto_edit[]" />
                                                     </div>
                                                 </div>
                                                 <div class="m-card-profile__pic col-2.4">
@@ -156,7 +156,7 @@
                                                     </div>
                                                     <div class="input-group m-input-group">
                                                         <input type="file" id="produkfoto4" name="berkas[]" accept="image/png, image/jpeg" multiple required />
-                                                        <input type="hidden" id="produkfoto4_edit" name="produkfoto4_edit" />
+                                                        <input type="hidden" id="produkfoto4_edit" name="foto_edit[]" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -317,7 +317,7 @@
     }
 
     function getProdukById(id) {
-        $("#produkid").val('undefined');
+        clearForm();
         $('#produkharga_view').val('');
         $('#produkharga').val('');
         swal({
@@ -369,9 +369,11 @@
                     $("#produksatuan").val(result.data.produksatuan);
                     $("#produkharga_view").val(format_number(result.data.produkharga));
                     if (result.data.produkaktif == 1) {
-                        $("#produkaktif").prop('checked', true);
+                        $("#status_view").prop('checked', true);
+                        $("#produkaktif").val('1');
                     } else {
-                        $("#produkaktif").prop('checked', false);
+                        $("#status_view").prop('checked', false);
+                        $("#produkaktif").val('0');
                     }
                 }
             }
